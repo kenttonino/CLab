@@ -16,13 +16,14 @@ void c_read_file(void) {
   printf("---------------------------------------");
   new_line(1);
 
+  // Initialize variables.
   FILE *input_file_pointer;
   char *working_directory = malloc(1000);
+  char *absolute_file_path = malloc(1000);
 
   // Concatenate the working directory and file path.
   working_directory = get_cwd(working_directory);
   char *file_path = "/src/ex_input_output/files/input.csv";
-  char *absolute_file_path = malloc(1000);
   strcpy(absolute_file_path, working_directory);
   strcat(absolute_file_path, file_path);
 
