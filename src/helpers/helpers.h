@@ -1,5 +1,5 @@
-#ifndef HELPER_H
-#define HELPER_H
+#ifndef HELPERS_H
+#define HELPERS_H
 #include "get_cwd.c"
 #include "clear_terminal.c"
 #include "new_line.c"

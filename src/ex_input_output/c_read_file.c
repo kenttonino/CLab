@@ -1,4 +1,4 @@
-#include "../helper/helper.h"
+#include "../helpers/helpers.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -7,13 +7,21 @@
 /*
  * A sample program that reads a file and print in the console.
  * */
-void io_read_file(void) {
+void c_read_file(void) {
+  // Program description.
+  printf("---------------------------------------");
+  new_line(1);
+  printf("Program: c_read_file.c");
+  new_line(1);
+  printf("---------------------------------------");
+  new_line(1);
+
   FILE *input_file_pointer;
   char *working_directory = malloc(1000);
 
   // Concatenate the working directory and file path.
   working_directory = get_cwd(working_directory);
-  char *file_path = "/src/io/files/input.csv";
+  char *file_path = "/src/ex_input_output/files/input.csv";
   char *absolute_file_path = malloc(1000);
   strcpy(absolute_file_path, working_directory);
   strcat(absolute_file_path, file_path);
