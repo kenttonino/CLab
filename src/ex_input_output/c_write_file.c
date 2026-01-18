@@ -28,10 +28,6 @@ void c_write_file(void) {
   strcpy(o_absolute_path, working_directory);
   strcat(o_absolute_path, o_file_path);
 
-  printf("input: %s", i_absolute_path);
-  new_line(1);
-  printf("output: %s", o_absolute_path);
-
   // Open a stream for the input and output file.
   i_file_pointer = fopen(i_absolute_path, "r");
   o_file_pointer = fopen(o_absolute_path, "w");
@@ -43,6 +39,11 @@ void c_write_file(void) {
     printf("Output file not found.");
     return;
   }
+
+  // Display the file paths.
+  printf("input: %s", i_absolute_path);
+  new_line(1);
+  printf("output: %s", o_absolute_path);
 
   // Read the character of the input file.
   // Then, write the character into the output file.
