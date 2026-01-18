@@ -9,21 +9,21 @@
  * */
 void c_read_file(void) {
   // Program description.
-  printf("---------------------------------------");
+  printf("-----------------------------------------------");
   new_line(1);
-  printf("Program: c_read_file.c");
+  printf("Program: ex_input_output/c_read_file.c");
   new_line(1);
-  printf("---------------------------------------");
+  printf("-----------------------------------------------");
   new_line(1);
 
   // Initialize variables.
   FILE *input_file_pointer;
   char *working_directory = malloc(1000);
   char *absolute_file_path = malloc(1000);
+  static char *file_path = "/src/ex_input_output/files/input.csv";
 
   // Concatenate the working directory and file path.
   working_directory = get_cwd(working_directory);
-  char *file_path = "/src/ex_input_output/files/input.csv";
   strcpy(absolute_file_path, working_directory);
   strcat(absolute_file_path, file_path);
 
