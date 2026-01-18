@@ -1,4 +1,5 @@
 #include "./helpers/helpers.h"
+#include "ex_concurreny/ex_concurrency.h"
 #include "ex_input_output/ex_input_output.h"
 
 int main(void) {
@@ -6,7 +7,9 @@ int main(void) {
   clear_terminal();
   new_line(2);
 
-  // Code example for input and output.
+  // Below are the sample programs of different sections.
+  ex_concurrency();
+  new_line(2);
   ex_input_output();
   new_line(2);
 
