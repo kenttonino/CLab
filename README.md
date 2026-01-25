@@ -7,7 +7,8 @@ language.
 
 <br />
 
-<img width="496" height="813" alt="Screenshot from 2026-01-25 13-09-02" src="https://github.com/user-attachments/assets/c715bd88-f3ac-4eb6-805b-3af6b387821e" />
+<img width="778" height="823" alt="Screenshot from 2026-01-25 13-37-50" src="https://github.com/user-attachments/assets/24194eb6-e01c-4b39-997e-12f46d7a5f41" />
+
 
 
 <br />
