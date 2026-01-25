@@ -19,8 +19,8 @@ language.
 ## Setup
 
 > - You might need `GNU GCC`, `GNU GDB`, and `GNU Make`.
+> - You can choose which sample programs you want to run by importing the header of that example directory.
 > - All the programs here runs and tested in `Debian Linux`.
-
 ```bash
 # Generate an executable file.
 make build
