@@ -10,8 +10,8 @@ int main(void) {
   // Below are the sample programs of different sections.
   ex_concurrency();
   new_line(2);
-  ex_input_output();
-  new_line(2);
+  // ex_input_output();
+  // new_line(2);
 
   return 0;
 }

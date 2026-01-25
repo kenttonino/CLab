@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 void *func_inside_thread(void *x) {
-  long int xi = (long int)x;
+  pthread_t xi = (pthread_t)x;
   printf("inside thread: x = %ld \n", xi);
   return (void *)(xi + 123);
 }
@@ -25,9 +25,14 @@ void c_basic_thread(void) {
   // Get the return of the paramater.
   // Print the result outside of the thread.
   void *ret_from_thread;
-  long int ri;
+  pthread_t ri;
   pthread_join(th, &ret_from_thread);
-  ri = (long int)ret_from_thread;
+  ri = (pthread_t)ret_from_thread;
 
-  printf("outside thread, which returned %ld. \n", ri);
+  new_line(1);
+  printf("outside thread, which returned %ld.", ri);
+  new_line(1);
+  printf("Sizeof th: %ld", sizeof(th));
+  new_line(1);
+  printf("Sizeof ret_from_thread: %ld", sizeof(ret_from_thread));
 }
