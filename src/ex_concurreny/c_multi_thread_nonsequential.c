@@ -13,11 +13,11 @@ void *inside_thread(void *i) {
 
 void c_multi_thread_nonsequential(void) {
   // Program description.
-  printf("---------------------------------------------------");
+  printf("-------------------------------------------------------");
   new_line(1);
   printf("program: ex_concurrency/c_multi_thread_nonsequential.c");
   new_line(1);
-  printf("---------------------------------------------------");
+  printf("-------------------------------------------------------");
   new_line(1);
 
   // Initialize and declare variables.
