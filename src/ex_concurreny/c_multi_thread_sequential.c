@@ -27,7 +27,7 @@ void c_multi_thread_sequential(void) {
   for (pthread_t i = 0; i < 5; i++) {
     pthread_t current_thread;
     pthread_create(&current_thread, NULL, inside_tread, (void *)i);
-    arr_thread_ids_ptr[i] = (pthread_t)current_thread;
+    arr_thread_ids_ptr[i] = current_thread;
     pthread_join(current_thread, NULL);
   }
 
