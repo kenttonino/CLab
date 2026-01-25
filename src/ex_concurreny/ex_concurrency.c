@@ -1,4 +1,5 @@
 #include "c_basic_thread.c"
+#include "c_multi_thread_nonsequential.c"
 #include "c_multi_thread_sequential.c"
 
 /*
@@ -8,5 +9,7 @@ void ex_concurrency(void) {
   c_basic_thread();
   new_line(2);
   c_multi_thread_sequential();
+  new_line(2);
+  c_multi_thread_nonsequential();
   new_line(2);
 }

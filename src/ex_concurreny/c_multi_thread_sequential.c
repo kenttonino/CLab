@@ -2,9 +2,9 @@
 #include <pthread.h>
 
 void *inside_tread(void *i) {
-  pthread_t thread_x = (pthread_t)i;
+  pthread_t thread_i = (pthread_t)i;
   pthread_t thread_id = pthread_self();
-  printf("Inside Thread Index %ld with ID = %ld", thread_x, thread_id);
+  printf("Inside Thread Index %ld with ID = %ld", thread_i, thread_id);
   new_line(1);
   return (void *)(thread_id);
 }
