@@ -1,3 +1,13 @@
+/*
+ * This function implemented a sample usage
+ * of _Atomic typename. The variable is passed
+ * as value for struct inner_thread_arg which
+ * will be incremented inside the thread using
+ * the atomic_fetch_add. That incremented variable,
+ * will be accessed again outside the thread.
+ *
+ * */
+
 #include "../helpers/helpers.h"
 #include <pthread.h>
 #include <stdatomic.h>
