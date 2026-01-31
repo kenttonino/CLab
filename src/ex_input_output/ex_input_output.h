@@ -7,8 +7,10 @@
 
 #ifndef EX_INPUT_OUTPUT_H
 #define EX_INPUT_OUTPUT_H
-#include "ex_input_output.c"
+#include "c_read_file.c"
+#include "c_write_file.c"
 
-extern void ex_input_output(void);
+extern void c_read_file(void);
+extern void c_write_file(void);
 
 #endif

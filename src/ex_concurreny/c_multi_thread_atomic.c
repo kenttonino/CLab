@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 struct inner_thread_arg {
-  pthread_t i;
+  int i;
   _Atomic int c;
 };
 
@@ -28,20 +28,26 @@ void c_multi_thread_atomic(void) {
   new_line(1);
 
   // Declare and initialize a variable.
-  _Atomic int *counter = malloc(sizeof(_Atomic int));
+  _Atomic int counter = 0;
   int arr_size = 5;
-  pthread_t *arr_pthread_ids_ptr = malloc(arr_size * sizeof(pthread_t));
   struct inner_thread_arg args;
 
   for (pthread_t i = 0; i < arr_size; i++) {
     args.i = i;
+    args.c = counter;
     pthread_t current_thread;
     pthread_create(&current_thread, NULL, inner_thread, &args);
+    pthread_join(current_thread, NULL);
+    counter = args.c;
   }
 
-  printf("Counter = %d", *counter);
-
+  printf("Counter = %d", counter);
+  new_line(1);
+  printf("Size of args: %ld", sizeof(args));
+  new_line(1);
+  printf("Size of args.i: %ld", sizeof(args.i));
+  new_line(1);
+  printf("Size of args.c: %ld", sizeof(args.c));
+  new_line(1);
   // Release the memory allocated.
-  free(arr_pthread_ids_ptr);
-  free(counter);
 }

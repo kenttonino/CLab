@@ -7,7 +7,7 @@ int main(void) {
   new_line(2);
 
   // Below are the sample programs of different sections.
-  ex_concurrency();
+  c_multi_thread_atomic();
   new_line(2);
 
   return 0;
